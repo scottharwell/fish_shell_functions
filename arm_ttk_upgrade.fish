@@ -5,7 +5,7 @@
 
 function arm_ttk_upgrade
     echo "👏🏻 Fetching latest arm-ttk build"
-    curl -sL https://aka.ms/arm-ttk-latest -o /tmp/arm-ttk.zip
+    curl -s -L https://api.github.com/repos/Azure/arm-ttk/releases/latest | grep "browser_download_url" | cut -d : -f 2,3 | tr -d \" | tr -d "[:blank:]" | wget -O /tmp/arm-ttk.zip -qi -
 
     echo "✅ Unzipping arm-ttk archive to tmp directory"
     unzip -o -q /tmp/arm-ttk.zip -d /tmp/arm-ttk
