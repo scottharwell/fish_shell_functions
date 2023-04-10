@@ -11,5 +11,7 @@ This repository contains fish shell scripts that I use frequently.
 
 | Name              | Description                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------ |
+| `abc`             | Runs the `ansible-builder create` function and alters the Dockerfile with the proper platform.   |
 | `avatar`          | Helper function to get download your avatar image from popular avatar hosting services.          |
 | `arm_ttk_upgrade` | Downloads and installs the latest version of the Azure ARM TTK in your Powershell modules folder |
+| `build_cloud_ee`  | Build the Cloud EE from the output of the `abc` function.                                        |
