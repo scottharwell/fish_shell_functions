@@ -14,5 +14,5 @@ function build_server_setup_ee
     docker buildx build --no-cache --platform linux/amd64,linux/arm64 -t scottharwell/server-setup-ee:latest . --push
     
     # CD back to the parent folder
-    cd .
+    cd ..
 end

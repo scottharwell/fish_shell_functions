@@ -14,5 +14,5 @@ function build_cloud_ee
     docker buildx build --no-cache --platform linux/arm64 -t quay.io/scottharwell/cloud-ee:local . --push
     
     # CD back to the parent folder
-    cd .
+    cd ..
 end
