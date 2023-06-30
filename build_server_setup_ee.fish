@@ -5,7 +5,8 @@
 
 function build_server_setup_ee
     # Run the abc function
-    abc
+    # abc
+    ansible-builder create --output-filename Dockerfile
     
     # CD into the context folder
     cd ./context
