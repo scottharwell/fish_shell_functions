@@ -4,6 +4,9 @@
 # Then, the `arm_ttk_upgrade` functions will be available from your shell.
 
 function abc
+    # Remove the context folder
+    rm -rf ./context
+
     # Build a Dockerfile
     ansible-builder create --output-filename Dockerfile
     
