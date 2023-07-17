@@ -15,7 +15,7 @@ function build_server_setup_ee
     cd ./context
     
     # Build the container
-    docker buildx build --no-cache --platform linux/amd64,linux/arm64 --progress=plain --build-arg ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN=$ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN -t scottharwell/server-setup-ee:latest . --push 2>&1 | tee build.log
+    docker buildx build --no-cache --platform linux/arm64 --progress=plain --build-arg ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN=$ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN -t scottharwell/server-setup-ee:latest . --push 2>&1 | tee build.log
     
     # CD back to the parent folder
     cd ..
