@@ -1,8 +1,5 @@
 #!/usr/bin/env fish
 
-# Place this file in ~/.config/fish/functions/
-# Then, the `arm_ttk_upgrade` functions will be available from your shell.
-
 function build_server_setup_ee
     # Delete the context folder
     rm -rf ./context
