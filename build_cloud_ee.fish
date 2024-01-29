@@ -11,7 +11,7 @@ function build_cloud_ee
     cd ./context
     
     # Build the container
-    docker buildx build --no-cache --platform=linux/arm64,linux/amd64 --progress=plain --build-arg ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN=$ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN -t quay.io/scottharwell/cloud-ee:local -t quay.io/scottharwell/cloud-ee:latest . --push 2>&1 | tee build.log
+    docker buildx build --no-cache --platform=linux/arm64,linux/amd64 --progress=plain --build-arg ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN=$ANSIBLE_GALAXY_SERVER_AUTOMATION_HUB_TOKEN -t quay.io/scottharwell/cloud-ee:local -t quay.io/scottharwell/cloud-ee:latest -t scottharwell/cloud-ee:latest . --push 2>&1 | tee build.log
     
     # CD back to the parent folder
     cd ..
