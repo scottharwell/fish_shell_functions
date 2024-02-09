@@ -4,7 +4,7 @@
 # Then, the `arm_ttk_upgrade` functions will be available from your shell.
 
 function aws_hicham
-    set -gx AWS_CREDS (aws sts get-session-token --profile hicham --serial-number arn:aws:iam::219817936593:mfa/sharwell --token (op item get "AWS - Hicham Account" --otp) | string collect)
+    set -gx AWS_CREDS (aws sts get-session-token --profile (op item get "AWS - Hicham Account" --field "Profile") --serial-number (op item get "AWS - Hicham Account" --field "MFA ARN") --token (op item get "AWS - Hicham Account" --otp) | string collect)
 
     set -Ux AWS_ACCESS_KEY_ID (echo $AWS_CREDS | jq -r .Credentials.AccessKeyId)
     set -Ux AWS_SECRET_ACCESS_KEY (echo $AWS_CREDS | jq -r .Credentials.SecretAccessKey)
