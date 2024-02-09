@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 # Place this file in ~/.config/fish/functions/
-# Then, the `arm_ttk_upgrade` functions will be available from your shell.
+# Then, the `aws_hicham` functions will be available from your shell.
 
 function aws_hicham
     set -gx AWS_CREDS (aws sts get-session-token --profile (op item get "AWS - Hicham Account" --field "Profile") --serial-number (op item get "AWS - Hicham Account" --field "MFA ARN") --token (op item get "AWS - Hicham Account" --otp) | string collect)
